@@ -2,9 +2,26 @@
     border: 0px;
     padding: 0px;
 }
+
 main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100% !important;
+
+    background-image: url(/assets/clinica.jpg);
+    background-size: cover;
+
     .login{
         background-color: aliceblue;
+        border-radius: 10px;
+        padding: 5px;
+        width: 300px;
     }
 }
 
+footer{
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+}
