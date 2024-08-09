@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    display: flex;
+    width: 100% !important;
+
+    background-image: url(/assets/clinica.jpg);
+    background-size: cover;
+}
+
+.fondo{
+    background-color: aliceblue;
+}
