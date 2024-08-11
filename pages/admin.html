@@ -36,7 +36,7 @@
     <main class="h-100 d-flex flex-column pt-5">
 
       <section class="container fondo">
-        <form>
+        <form id="formulario-alta">
           <div>
             <label class="form-label">Nombre</label>
             <input type="text" class="form-control" id="inputNombre" placeholder="Nombre">
@@ -53,23 +53,23 @@
             <label class="form-label">Numero de telefono</label>
             <input type="text" class="form-control" id="inputNumTel" placeholder="Numero Tel.">
           </div>
-          <button type="submit" class="btn btn-primary" id="btnAgregar" onclick="agregarUser()">Agregar</button>
+          <button type="submit" class="btn btn-primary" id="btnAgregar">Agregar</button>
         </form>
       </section>
 
       <section class="container fondo">
         <div class="container text-center tabla px-3 m-3 text-body ">
           <div class="d-flex row-12 mt-3 border border-primary border-2">
-            <div class="col-3 bg-primary bg-opacity-50 border border-primary border-1">
+            <div class="col bg-primary bg-opacity-50 border border-primary border-1">
               Nombre
             </div>
-            <div class="col-3 bg-primary bg-opacity-50 border border-primary border-1">
+            <div class="col bg-primary bg-opacity-50 border border-primary border-1">
               Apellido
             </div>
-            <div class="col-3 bg-primary bg-opacity-50 border border-primary border-1">
+            <div class="col bg-primary bg-opacity-50 border border-primary border-1">
               DNI
             </div>
-            <div class="col-3 bg-primary bg-opacity-50 border border-primary border-1">
+            <div class="col bg-primary bg-opacity-50 border border-primary border-1">
               Numero Tel.
             </div>
           </div>
