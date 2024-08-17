@@ -15,4 +15,18 @@ footer{
     .lista{
         list-style: none;
     }
+
+    .redes{
+        display: flex;
+        margin: 0px 0px;
+        list-style: none;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .copyright{
+        font-size: 10px;
+        color: gray;
+    }
 }
