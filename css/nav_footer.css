@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+header{
+    width: 100%;
+}
+
 footer{
     width: 100%;
     background-color: white;

@@ -1,6 +1,5 @@
-*{
-    border: 0px;
-    padding: 0px;
+body{
+    background-image: url(../assets/clinica2.jpeg);
 }
 
 main{
@@ -18,20 +17,4 @@ main{
         padding: 5px;
         width: 80%;
     }
-}
-
-footer{
-    bottom: 0;
-    position: absolute;
-    width: 100%;
-    background-color: white;
-    
-
-    .lista{
-        list-style: none;
-    }
-}
-
-#btnIniciarSesion{
-    margin-left: 55%;
 }
