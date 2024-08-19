@@ -41,9 +41,12 @@ function crearTabla(){
                 <td>${usuario.dni}</td>
                 <td>${usuario.numTel}</td>
                 <td>${usuario.correo}</td>
-                <td>
-                    <button class="btn btn-danger btn-trash" onclick="eliminarUsuario('${usuario.id}')">
+                <td class="row">
+                    <button class="btn btn-danger btn-trash mx-1" onclick="editarUsuario('${usuario.id}')">
                         <i class="bi bi-trash" aria-hidden="true"></i>
+                    </button>
+                    <button class="btn btn-warning btn-trash" onclick="eliminarUsuario('${usuario.id}')">
+                        <i class="bi bi-pencil" aria-hidden="true"></i>
                     </button>
                 </td>`;
             fila.innerHTML = celdas;
@@ -88,4 +91,15 @@ const eliminarUsuario = (id) =>{
         }
     }
 
+}
+
+const editarUsuario = (id) =>{
+    let index = usuarios.findIndex((item)=>item.id === id);
+
+    nombre.value = usuarios[index].nombre;
+    apellido.value = usuarios[index].apellido;
+    dni.value = usuarios[index].dni;
+    numTel.value = usuarios[index].numTel;
+    correo.value = usuarios[index].correo;
+    contraseña.value = usuarios[index].contraseña;
 }
