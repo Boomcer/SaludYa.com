@@ -52,8 +52,6 @@ function crearTabla(){
     });
 }
 
-
-
 const agregarUsuario = () => {
 
     if(usuarios.find(usuario => usuario.correo === correo.value)){
