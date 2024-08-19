@@ -14,7 +14,6 @@ let admins = [
     new admin("Cesar Nicolas", "Gallardo", "41299976", "3814400357", "gallardo41299@gmail.com", "123456")
 ]
 
-localStorage.setItem("users", JSON.stringify(admins));
 
 let usuarios = JSON.parse(localStorage.getItem("users")) || [];
 
