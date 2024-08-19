@@ -20,54 +20,52 @@
 
   </head>
   <body class="d-flex flex-column justify-content-between vh-100">
-    <header>
+    <header class="">
       <nav class="navbar bg-body-tertiary">
         <div class="container-fluid">
           <a class="navbar-brand aling">SaludYa</a>
           <form class="d-flex gap-3" role="search">
-            <button class="btn btn-primary" type="submit">Registrarse</button>
-            <button class="btn btn-primary" type="submit">
-              Iniciar sesion
-            </button>
+            <a href="../pages/registro.html" class="btn btn-primary">Registrarse</a>
+            <a href="../index.html" class="btn btn-primary">Iniciar sesión</a>
           </form>
         </div>
       </nav>
     </header>
-    <main class="h-100 d-flex flex-column pt-5">
+    <main class="d-flex flex-column pt-5">
 
       <section class="container fondo">
         <form id="formulario-alta">
           <div class="row">
             <div class="col-md">
               <label class="form-label">Nombre</label>
-              <input type="text" class="form-control" id="nombre" placeholder="Nombre">
+              <input type="text" class="form-control" id="nombre" placeholder="Nombre" required>
             </div>
             <div class="col-md">
               <label class="form-label">Apellido</label>
-              <input type="text" class="form-control" id="apellido" placeholder="Apellido">
+              <input type="text" class="form-control" id="apellido" placeholder="Apellido" required>
             </div>
           </div>
 
           <div class="row">
             <div class="col-md">
               <label class="form-label">DNI</label>
-              <input type="text" class="form-control" id="dni" placeholder="DNI">
+              <input type="text" class="form-control" id="dni" placeholder="DNI" required>
             </div>
             <div class="col-md">
               <label class="form-label">Numero de telefono</label>
-              <input type="text" class="form-control" id="numTel" placeholder="Numero Tel.">
+              <input type="text" class="form-control" id="numTel" placeholder="Numero Tel." required>
             </div>
           </div>
           <div>
             <label class="form-label">Correo</label>
-            <input type="mail" class="form-control" id="correo" placeholder="E-mail">
+            <input type="mail" class="form-control" id="correo" placeholder="E-mail" required>
           </div>
           <div>
             <label class="form-label">Contraseña</label>
-            <input type="mail" class="form-control" id="contraseña" placeholder="Contraseña ">
+            <input type="mail" class="form-control" id="contraseña" placeholder="Contraseña" required>
           </div>
           <div class="d-flex justify-content-end mt-3">
-            <button type="submit" class="btn btn-primary" id="btnAgregar" onclick="agregarUsuario()">Agregar</button>
+            <button type="submit" class="btn btn-primary" id="btnAgregar" onclick="agregarUsuario()" required>Agregar</button>
           </div>
         </form>
       </section>
@@ -83,7 +81,7 @@
                   <td>DNI</td>
                   <td>Telefono</td>
                   <td>Correo</td>
-                  <td>Contraseña</td>
+                  <td></td>
                 </tr>
               </thead>
               <tbody id="tabla" class="overflow-y-scroll"></tbody>
@@ -94,7 +92,8 @@
       </section>
       
     </main>
-    <footer class="container-fluid text-center">
+
+    <footer class="container-fluid text-center row">
       <div class="row aling-items-center">
         <div class="col-12 col-md align-self-center">
           <ul class="p-0 m-0 lista align-self-center">

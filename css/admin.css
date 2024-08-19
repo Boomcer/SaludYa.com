@@ -18,5 +18,19 @@ main{
 }
 
 section table{
-    font-size: 14px;
+    font-size: 12px;
+}
+
+.btn-trash{
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+i{
+    width: 15px;
+    height: 15px;
+    margin-bottom: 5px;
 }

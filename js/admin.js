@@ -26,33 +26,68 @@ const guardarUsuarios = () => {
 };
 
 let cuerpoTabla = document.querySelector("#tabla");
-cuerpoTabla.innerHTML = "";
 
-usuarios.map((usuario) =>{
+crearTabla()
+
+function crearTabla(){
+    cuerpoTabla.innerHTML = "";
+
+    usuarios.map((usuario) =>{
     
-        let fila = document.createElement("tr");
-        let celdas = `
-            <td>${usuario.nombre}</td>
-            <td>${usuario.apellido}</td>
-            <td>${usuario.dni}</td>
-            <td>${usuario.numTel}</td>
-            <td>${usuario.correo}</td>
-            <td>
-                <button class="btn btn-primary rounded-pill" onclick="eliminarUsuario(${usuario.id})">
-                    <i class="fa fa-trash-o" aria-hidden="true"></i>
-                </button>
-            </td>`;
-        fila.innerHTML = celdas;
-        cuerpoTabla.append(fila);
+            let fila = document.createElement("tr");
+            let celdas = `
+                <td>${usuario.nombre}</td>
+                <td>${usuario.apellido}</td>
+                <td>${usuario.dni}</td>
+                <td>${usuario.numTel}</td>
+                <td>${usuario.correo}</td>
+                <td>
+                    <button class="btn btn-danger btn-trash" onclick="eliminarUsuario('${usuario.id}')">
+                        <i class="bi bi-trash" aria-hidden="true"></i>
+                    </button>
+                </td>`;
+            fila.innerHTML = celdas;
+            cuerpoTabla.append(fila);
+    
+    });
+}
 
-});
 
 
 const agregarUsuario = () => {
 
-    let user = new admin(nombre.value, apellido.value, dni.value, numTel.value, correo.value);
+    if(usuarios.find(usuario => usuario.correo === correo.value)){
+        alert("Ya existe una cuenta con ese correo")
+    }
 
-    usuarios.push(user);
-    guardarUsuarios();
-    document.querySelector("#formulario-alta").reset();
+    else{
+        let user = new admin(nombre.value, apellido.value, dni.value, numTel.value, correo.value);
+    
+        usuarios.push(user);
+        guardarUsuarios();
+        document.querySelector("#formulario-alta").reset();
+        crearTabla();
+    }
+
+}
+
+const eliminarUsuario = (id) =>{
+    let index = usuarios.findIndex((item)=>item.id === id)
+
+    if(usuarios[index].id === usuarios[0].id){
+        alert("Esta cuenta no se puede borrar");
+    }
+
+    else{
+        if(index>=0){
+            let validar = confirm(`Esta seguro que quiere eliminar a ${usuarios[index].nombre}`)
+    
+            if(validar){
+                usuarios.splice(index,1)
+                localStorage.setItem('users', JSON.stringify(usuarios))
+                crearTabla();
+            }
+        }
+    }
+
 }
