@@ -1,6 +1,4 @@
 
-
-
 class Usuario {
     constructor(nombre, apellido, patologia, obraSocial, correo, contraseña) {
         this.id = usuarios.length > 0 ? usuarios.at(-1).id + 1 : 1;

@@ -12,9 +12,11 @@ main{
     background-size: cover;
 
     .login{
-        background-color: aliceblue;
+        background-color: rgba(240, 248, 255,95%);
         border-radius: 10px;
         padding: 5px;
         width: 80%;
+        max-width: 550px;
     }
+
 }

@@ -6,11 +6,17 @@
 main{
     display: flex;
     width: 100% !important;
+    flex-grow: 1;
 
     background-image: url(/assets/clinica.jpg);
     background-size: cover;
+
 }
 
 .fondo{
     background-color: aliceblue;
+}
+
+section table{
+    font-size: 14px;
 }
